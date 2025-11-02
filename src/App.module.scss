@@ -1,0 +1,25 @@
+:global(body) {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(160deg, #1f1f3a 0%, #11111f 60%, #050508 100%);
+  color: #f5f7ff;
+}
+
+$card-bg: rgba(17, 19, 35, 0.85);
+
+.app {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.wrapper {
+  background-color: $card-bg;
+  border-radius: 24px;
+  padding: 48px 56px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+}

@@ -1,0 +1,59 @@
+$accent: #ff6b6b;
+$accent-secondary: #1dd1a1;
+$primary: #54a0ff;
+$text-subtle: rgba(245, 247, 255, 0.7);
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  min-width: 320px;
+}
+
+.controls {
+  display: flex;
+  gap: 18px;
+}
+
+.button {
+  min-width: 100px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0b0b10;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    box-shadow: none;
+  }
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+}
+
+.start {
+  background: linear-gradient(135deg, $accent-secondary 0%, lighten($accent-secondary, 12%) 100%);
+}
+
+.stop {
+  background: linear-gradient(135deg, $accent 0%, lighten($accent, 8%) 100%);
+}
+
+.reset {
+  background: linear-gradient(135deg, $primary 0%, lighten($primary, 12%) 100%);
+  color: $text-subtle;
+}
